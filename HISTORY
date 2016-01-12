@@ -1,0 +1,43 @@
+# What is Hu-Go! ?
+
+It's a pc engine emulator. The PC Engine is a 8-16 bits console which had quite a great success in Japan from 1986, roughly, until early 90's.
+
+In my humble, opinion, it's a wonderful little console with plenty of hits. We can estimate the number of games to 300 on cartridge (called HuCard because Hudson was very involved in this machine, however distributed by Nec) and about 400 on CDs. CDs ?
+
+Indeed, although this console is pretty old, it already featured a cd drive. And what a cd drive !! Even if only x1 speed, this extension was enabling ADPCM sound (for hi quality digitized sound/speech), cd sound, obviously, and very hi capacity for games, allowing anime sequences and even digitized video at the end (Huvideo, very impressive).
+
+The raw console was featuring 6 PCM voices, with an instrument of 32 samples of 5 bits for each, a 8-16 bits processor called Hu6280, which is a boosted 6502 with 16 bits shortcuts for video registers and extra addressing modes. It had also an addressable size of 64 kb among which could be fitted 8 bank of 8 kb each. A whole bank were devoted for RAM (which was 8 kb).
+
+Concerning the video, it was handled by a pure 16 bits processor with 32 kb of RAM. Able to handle directly 64 sprites on two planes and a 8x8 pixels tiles plane, it was perfect for creating hi speed shoot'em ups (the predilection domain of the pc engine). Furthermore, it could handle 16 palettes of 16 colors for sprites and another 16 palettes of 16 colors for tiles. Each color could be chosen among a 512 color palette (3 bits for Red, 3 bits for Blue and 3 bits for Green).
+
+There were an evolution to the normal core graphx, called SuperGraphx. This console had very few success. Able to run all coregraphx games plus the specific 6 and an half games (and an half because Darius Alpha is able to run on core graphx but can take advantage of SuperGraphx when available), it was a coregraphx with 4 times more RAM and an extra video chip (which were doubling the size of the RAM and the number of planes). Unfortunately, the cpu part weren't upgraded and the console had troubles taking advantages of this extra stuff.
+
+The pc engine gamme didn't stop there. The coregraphx existed in gray or white (more rare), a tiny console (around 10 cm x 10 cm x 3 cm) , the US version called itself Turbographx 16 (american distributor maybe thought that "16" would make it appear more powerful), and was also much more bulky (always for power looking purpose). Of course, there were several CD extensions (cd rom² and super cd rom², with built in normal cd bios or "extended" one) and some bundle, called DUO which were including a normal console plus the cd drive. Little changes for the DUO-R and DUO-RX (just color and bundle changes).
+
+I almost forgot to tell you about the portable versions of the pc engine, called pc engine gt in its japanese version and turbo express in USA, it's a color portable console as powerful as the normal coregraphx. Unfortunately, it's very power consuming and some very fast and little sprites can appear very blurry in shoot'em up. A tuner could even be fitted to turn the console into a little TV receiver :)
+
+Some weird machine were also released, as the Shuttle, a simple coregraphx but with an extravagant design, as well as some accessories (save game extensions, booster for higher video quality, joypads and even a modem :).
+
+The scene around the pc engine is not the biggest but it counts many fans and we're finding plenty of people devoting their homepage to it ^^
+
+# How many work made?
+
+Now, the console is introduced, you'll understand that an emulator is a program made to fake the behavior of this hardware. You're giving it a game in input and it gives its best to let you play it as if you were using the real console.
+
+As for Hu-Go! in itself, it's coming from FPCE, made by Bero, a not very advanced pc engine emulator but which were already working fine. When I discovered the pc engine emulation scene as an user, I wanted to give an hand by coding. After having tried to join an existing active emu, I've took back fpce and with Bero's agreement, I've changed the name with the arrival of plenty of new features.
+
+When coding Hu-Go!, I've used piece of code or inspiration from others emus. Xpce is the first of them, coded by Hmmx, this directX port of fpce was featuring an improved sprite handling and sound. Later, Nyef did an impressive work on cd hacking and is the source of the cd emulation available in Hu-Go!. As for some DOS cd routines, I've used pieces of a french NeoGeo CD emulator (I can't remember the name right now, sorry). David Michel, author of the excellent (but commercial) Magic engine also gave help when I needed it. David Shadoff, too, gave a lot of help (and notably the new hu6280 kernel).
+
+I hope I don't forget anyone :)
+
+Now, Hu-Go! is quite known in the pc engine scene and I'm very proud of having brought my knowledge to the pc engine scene. I've been thanked in many ways. First, I've received ton of emails, either for thanking me, or asking me new features and such but mostly (and unfortunately) for bugs correction :( Then, I've been given some kinds of gifts (pc engine cds or such, pc used hardware, used console !!) I would never thanked people enough who sent me all of this.
+
+So, back to the emulation stuff in itself :)
+
+Hu-Go!, like any other emulator, can't live alone. Don't forget it's just a virtual machine and you'll need pc engine games in order to make something useful out of it. However, as you will have notived, modern computer don't have a slot for inserting HuCard but this doesn't prevent you from playing games existing in this form. Indeed, a console cartridge is no more a read only floppy with a strange shape :) that means that it contains a string a bit, just like any device and/or file. There are some machines able to extract this string of bit out of a HuCard and to copy it into a file. The console cartridge is made of ROM memory (which can only be read) and by extension, the resulting file from a dumping is also called a "rom".
+
+This "rom" can be passed to an emulator, which will then be able to fake the behaviour of the machine as if you had inserted the cartridge from which the rom is extract, in the real console.
+
+Don't forget that the pc engine also had CD games. Fortunately, in this case, you just have to insert the real cd in your drive and launch the emu to use it. Hu-Go! also have the ability to use dumps from CDs, a "short" dump (only the code track, without the audio [non recommended] ), an iso/mp3 dump, a plain  raw image of the cd and even a mix of all of this.
+
+Advantages are that you can play translated, trained or improved games this way...
